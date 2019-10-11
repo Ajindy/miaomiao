@@ -3,8 +3,7 @@ import MessageBox from './MessageBox';
 
 export var messageBox = (function(){
 
-    return function( opts ){  //配置参数
-
+   
         var defaults = {   //默认值
             title : '',
             content : '',
@@ -13,9 +12,10 @@ export var messageBox = (function(){
             handleCancel : null,
             handleOk : null
         };
-    
-        var MyComponent = Vue.extend(MessageBox);
+     
 
+    var MyComponent = Vue.extend(MessageBox);
+    return function( opts ){  //配置参数
         for(var attr in opts){
             defaults[attr] = opts[attr];
         }
